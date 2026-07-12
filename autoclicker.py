@@ -1,31 +1,4 @@
 """
-Auto Clicker - Dark Edition
-============================
-A fast, configurable auto clicker with a dark, edgy GUI.
-
-Features:
-- Adjustable clicks per second (CPS), up to 500+ (see note below)
-- Left / Right / Middle click support
-- Click at current cursor position OR at a fixed saved position
-- Toggle hotkey (default: F6) to start/stop mouse clicking, works even when the window isn't focused
-- Key presser: type any key (letter, number, or name like 'space'/'enter'/'f1') and
-  have it auto-pressed at an adjustable rate, independent of the mouse clicker.
-  Toggle hotkey (default: F7).
-- Emergency stop hotkey (default: F9) - stops both clicker and key presser
-- Optional click/press limits (stop automatically after N clicks/presses)
-- Live click and press counters
-- Dark theme, colorblind-safe status indicators (icon + text + color, never color alone)
-
-NOTE ON SPEED:
-True 500 clicks/second means one click every 2 milliseconds. Python's
-threading + OS mouse-event dispatch can usually keep up with this timing-wise,
-but whether the TARGET application actually "sees" every single click depends
-on that app's own input polling rate / OS event queue. Games and some
-programs cap how fast they'll register clicks regardless of how fast you
-send them. This tool sends clicks as fast as configured; registration above
-a few hundred/sec is application-dependent, not something any clicker
-software can force.
-
 Requirements:
     pip install pynput
 
